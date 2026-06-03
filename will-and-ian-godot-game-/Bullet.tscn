@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://dqway8ipeeg8m"]
 
 [ext_resource type="Script" uid="uid://cbhoe2h73o1y3" path="res://bullet.gd" id="1_4s4u5"]
-[ext_resource type="Texture2D" uid="uid://d0juvydom7tbf" path="res://Assets/bullet-pixilart (1).png" id="1_ayd6b"]
+[ext_resource type="Texture2D" uid="uid://c331bwmj04n7l" path="res://Assets/pixil-frame-0-2.png" id="2_4s4u5"]
 
 [node name="Bullet" type="Node2D" unique_id=571488683]
 script = ExtResource("1_4s4u5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=372136071]
 texture_filter = 1
-texture = ExtResource("1_ayd6b")
+texture = ExtResource("2_4s4u5")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=197654034]
-rect = Rect2(-2, -2, 6, 4)
+position = Vector2(-2, -1)
+rect = Rect2(-3, -3, 10, 10)
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

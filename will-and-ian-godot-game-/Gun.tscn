@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://tirhs1qb73hi"]
 
 [ext_resource type="Script" uid="uid://oxw2f5uc8v0n" path="res://gun.gd" id="1_fry05"]
-[ext_resource type="Texture2D" uid="uid://d1fn756sxckp5" path="res://Assets/pixilart-drawing (8).png" id="1_jpqjm"]
+[ext_resource type="Texture2D" uid="uid://cgbrob0vudcut" path="res://Assets/pixil-frame-0.png" id="2_fry05"]
 
 [node name="Gun" type="Node2D" unique_id=1872596931]
 script = ExtResource("1_fry05")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=920353431]
 texture_filter = 1
-position = Vector2(10, 0)
-texture = ExtResource("1_jpqjm")
+position = Vector2(14, 0)
+texture = ExtResource("2_fry05")
 
 [node name="Marker2D" type="Marker2D" parent="Sprite2D" unique_id=1494456927]
-position = Vector2(6, -1)
+position = Vector2(3, 1)
