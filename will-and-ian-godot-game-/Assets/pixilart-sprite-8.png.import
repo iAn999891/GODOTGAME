@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bemy5r4hta2mq"
-path="res://.godot/imported/DinoSprites - mort.png-cc3f9a39ada7c06d552e2389a585cce8.ctex"
+uid="uid://cj1vfgr7onc1l"
+path="res://.godot/imported/pixilart-sprite-8.png-8efeb09936fec4fa337ae0339ca41657.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sheets/DinoSprites - mort.png"
-dest_files=["res://.godot/imported/DinoSprites - mort.png-cc3f9a39ada7c06d552e2389a585cce8.ctex"]
+source_file="res://Assets/pixilart-sprite-8.png"
+dest_files=["res://.godot/imported/pixilart-sprite-8.png-8efeb09936fec4fa337ae0339ca41657.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdll3q3alhelr"
-path="res://.godot/imported/DinoSprites - vita.png-62a611cde7a41ecc6607ef557641eaa5.ctex"
+uid="uid://f3g6d5cneidt"
+path="res://.godot/imported/pixilart-sprite-4.png-7fad57b45ffab5d3fe29f845c771020e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sheets/DinoSprites - vita.png"
-dest_files=["res://.godot/imported/DinoSprites - vita.png-62a611cde7a41ecc6607ef557641eaa5.ctex"]
+source_file="res://Assets/pixilart-sprite-4.png"
+dest_files=["res://.godot/imported/pixilart-sprite-4.png-7fad57b45ffab5d3fe29f845c771020e.ctex"]
 
 [params]
 

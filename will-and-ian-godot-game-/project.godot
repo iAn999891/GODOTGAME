@@ -48,4 +48,4 @@ Move_right={
 [rendering]
 
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(3.1766297e-06, 0.54259473, 0.25764313, 1)
+environment/defaults/default_clear_color=Color(0.32432464, 0.71181804, 0.48164165, 1)
