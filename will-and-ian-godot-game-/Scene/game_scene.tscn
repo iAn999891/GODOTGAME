@@ -9,4 +9,4 @@ unique_name_in_owner = true
 movement_speed = 90.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=78072224]
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
