@@ -4,6 +4,11 @@ extends CharacterBody2D
 var character_direction : Vector2
 
 func _physics_process(_delta):
+	if get_global_mouse_position().x < global_position.x:
+		%sprite.flip_h = true
+	else:
+		%sprite.flip_h = false
+	
 	character_direction.x = Input.get_axis("Move_left", "Move_right")
 	character_direction.y = Input.get_axis("Move_up", "Move_down")
 	character_direction = character_direction.normalized()
