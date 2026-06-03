@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://crel80pom48sh" path="res://Scene/Player_movment.gd" id="1_bxodg"]
 [ext_resource type="Texture2D" uid="uid://comxo72fii2dk" path="res://Assets/pixilart-sprite-2.png" id="2_jvxg0"]
 [ext_resource type="Texture2D" uid="uid://dnuhdcm3ki0lg" path="res://Assets/pixilart-sprite-5.png" id="3_mud5u"]
+[ext_resource type="PackedScene" uid="uid://tirhs1qb73hi" path="res://Gun.tscn" id="4_mud5u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvocf"]
 atlas = ExtResource("2_jvxg0")
@@ -93,3 +94,6 @@ frame_progress = 0.8697856
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=261445788]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_jvxg0")
+
+[node name="Gun" parent="." unique_id=1872596931 instance=ExtResource("4_mud5u")]
+position = Vector2(0, 2)
