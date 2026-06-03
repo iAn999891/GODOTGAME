@@ -6,8 +6,7 @@
 
 [node name="Player" parent="." unique_id=1848780568 instance=ExtResource("1_e32lr")]
 unique_name_in_owner = true
-position = Vector2(2, 3)
 movement_speed = 90.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=78072224]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
