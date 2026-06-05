@@ -79,8 +79,8 @@ radius = 4.0
 height = 10.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mud5u"]
-radius = 6.0
-height = 14.0
+radius = 11.0
+height = 22.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mud5u"]
 bg_color = Color(0, 0, 0, 1)
