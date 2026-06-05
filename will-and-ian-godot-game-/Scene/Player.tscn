@@ -84,10 +84,17 @@ height = 14.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mud5u"]
 bg_color = Color(0, 0, 0, 1)
-corner_detail = 12
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvocf"]
 bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D" unique_id=1848780568]
 motion_mode = 1
@@ -121,6 +128,7 @@ shape = SubResource("CapsuleShape2D_mud5u")
 debug_color = Color(0.7828184, 0.4113323, 0.39118412, 0.41960785)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=235019772]
+unique_name_in_owner = true
 offset_left = -12.0
 offset_top = -10.0
 offset_right = 138.00626
