@@ -1,6 +1,6 @@
 extends Node2D
 
-const BULLET = preload("res://Bullet.tscn")
+const BULLET = preload("res://Scene/Bullet.tscn")
 
 @onready var muzzle: Marker2D = $Sprite2D/Marker2D
 
