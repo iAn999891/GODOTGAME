@@ -12,4 +12,5 @@ position = Vector2(14, 0)
 texture = ExtResource("2_00sm7")
 
 [node name="Marker2D" type="Marker2D" parent="Sprite2D" unique_id=1494456927]
+unique_name_in_owner = true
 position = Vector2(3, 2)

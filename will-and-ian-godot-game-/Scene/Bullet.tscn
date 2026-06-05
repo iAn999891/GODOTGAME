@@ -4,7 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://c331bwmj04n7l" path="res://Assets/pixil-frame-0-2.png" id="2_atepo"]
 [ext_resource type="Script" uid="uid://brm4afmgkqr88" path="res://Scripts/Bullet_spin.gd" id="3_mxv70"]
 
-[node name="Bullet" type="Node2D" unique_id=571488683]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckvpt"]
+size = Vector2(8, 8)
+
+[node name="Bullet" type="Area2D" unique_id=2030396150]
 script = ExtResource("1_ckvpt")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=197654034]
@@ -17,4 +20,8 @@ position = Vector2(0, -1)
 texture = ExtResource("2_atepo")
 script = ExtResource("3_mxv70")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1376494657]
+shape = SubResource("RectangleShape2D_ckvpt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

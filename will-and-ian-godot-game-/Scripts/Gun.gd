@@ -18,3 +18,9 @@ func _process(_delta: float) -> void:
 		get_tree().root.add_child(bullet_instance)
 		bullet_instance.global_position = muzzle.global_position
 		bullet_instance.rotation = rotation
+
+func Fire():
+	const BULLET = preload("res://Scene/Bullet.tscn")
+	var new_bullet = BULLET.instantiate()
+	new_bullet.global_position = %ShootingPoint.global_postion
+	%ShootingPoint.add_child(new_bullet)

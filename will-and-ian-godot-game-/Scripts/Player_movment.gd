@@ -3,6 +3,10 @@ extends CharacterBody2D
 @export var movement_speed : float = 500
 var character_direction : Vector2
 
+signal health_depleted
+
+var health = 150.0
+
 func _physics_process(_delta):
 	if get_global_mouse_position().x < global_position.x:
 		%sprite.flip_h = true
@@ -24,3 +28,10 @@ func _physics_process(_delta):
 		if %sprite.animation != "Idle": %sprite.animation = "Idle"
 		
 	move_and_slide()
+	
+	const DAMAGE_RATE = 500
+	var overlapping_mobs = %Hitbox.get_overlapping_bodies()
+	if overlapping_mobs.size() > 0:
+		health -= DAMAGE_RATE * overlapping_mobs.size() * _delta
+		if health <= 0.0:
+			health_depleted.emit()

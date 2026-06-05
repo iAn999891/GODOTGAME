@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c1x7t6cqfax0x" path="res://Assets/Tilesets/Tilled Dirt.png" id="3_f38sd"]
 [ext_resource type="Texture2D" uid="uid://cx8do8lkru762" path="res://Assets/Tilesets/Tilled_Dirt_v2.png" id="4_m5do6"]
 [ext_resource type="Texture2D" uid="uid://cqxl1wxwona87" path="res://Assets/Tilesets/Tilled_Dirt_Wide.png" id="4_ugwxx"]
+[ext_resource type="PackedScene" uid="uid://5n01jdrnb7qo" path="res://Scene/mob.tscn" id="8_ee6vw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k031u"]
 texture = ExtResource("1_m5do6")
@@ -552,3 +553,6 @@ movement_speed = 90.0
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.5
+
+[node name="Mob" parent="." unique_id=1509565561 instance=ExtResource("8_ee6vw")]
+position = Vector2(14, -37)

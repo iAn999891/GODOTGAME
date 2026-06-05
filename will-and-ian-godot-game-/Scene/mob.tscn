@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://5n01jdrnb7qo"]
+
+[ext_resource type="Script" uid="uid://b1121ijvf1nqa" path="res://Scene/mob.gd" id="1_j0k6o"]
+[ext_resource type="Texture2D" uid="uid://doyqfggds1qik" path="res://Assets/pixilart-sprite-10.png" id="1_s8skk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0k6o"]
+atlas = ExtResource("1_s8skk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6qkr"]
+atlas = ExtResource("1_s8skk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn6mr"]
+atlas = ExtResource("1_s8skk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7ncj"]
+atlas = ExtResource("1_s8skk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1snj"]
+atlas = ExtResource("1_s8skk")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_je71b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0k6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6qkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn6mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7ncj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1snj")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_piucu"]
+radius = 7.0
+height = 14.0
+
+[node name="Mob" type="CharacterBody2D" unique_id=1509565561]
+script = ExtResource("1_j0k6o")
+
+[node name="Carrot" type="AnimatedSprite2D" parent="." unique_id=699888895]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_je71b")
+animation = &"Walk"
+autoplay = "Walk"
+frame_progress = 0.9170388
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1764786532]
+shape = SubResource("CapsuleShape2D_piucu")
