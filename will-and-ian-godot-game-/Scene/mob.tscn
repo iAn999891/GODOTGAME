@@ -51,6 +51,7 @@ radius = 7.0
 height = 14.0
 
 [node name="Mob" type="CharacterBody2D" unique_id=1509565561]
+collision_layer = 3
 script = ExtResource("1_j0k6o")
 
 [node name="Carrot" type="AnimatedSprite2D" parent="." unique_id=699888895]

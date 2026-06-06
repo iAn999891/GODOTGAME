@@ -124,9 +124,9 @@ texture = ExtResource("2_edujn")
 4:0/0 = 0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.7590485, -3.2644348, 8, -3.3633575, 8, 8, 3.7590485, 8)
 6:0/0 = 0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.7590485, -3.2644348, -8, -3.3633575, -8, 8, -3.7590485, 8)
 7:0/0 = 0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:0/0 = 0
@@ -143,9 +143,9 @@ texture = ExtResource("2_edujn")
 4:1/0 = 0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.7590485, -3.2644348, 8, -3.3633575, 8, 8, 3.7590485, 8)
 6:1/0 = 0
-6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.7590485, -3.2644348, -8, -3.3633575, -8, 8, -3.7590485, 8)
 7:1/0 = 0
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:1/0 = 0
@@ -555,4 +555,10 @@ position_smoothing_enabled = true
 position_smoothing_speed = 2.5
 
 [node name="Mob" parent="." unique_id=1509565561 instance=ExtResource("8_ee6vw")]
-position = Vector2(14, -37)
+position = Vector2(23, -70)
+
+[node name="Mob3" parent="." unique_id=1864219841 instance=ExtResource("8_ee6vw")]
+position = Vector2(68, -73)
+
+[node name="Mob2" parent="." unique_id=1921024091 instance=ExtResource("8_ee6vw")]
+position = Vector2(100, -48)
