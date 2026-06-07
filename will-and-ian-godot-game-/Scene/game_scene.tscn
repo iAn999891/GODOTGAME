@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cro66qmbqsigd" path="res://Scene/Player.tscn" id="1_e32lr"]
 [ext_resource type="Texture2D" uid="uid://bx4ck5df3b16k" path="res://Assets/Tilesets/Water.png" id="1_m5do6"]
-[ext_resource type="Script" uid="uid://dec4vur4fttyq" path="res://Scene/game_scene.gd" id="1_mlt6n"]
+[ext_resource type="Script" uid="uid://dec4vur4fttyq" path="res://Scripts/game_scene.gd" id="1_mlt6n"]
 [ext_resource type="Texture2D" uid="uid://7ghdfqb0vbj1" path="res://Assets/Tilesets/Grass.png" id="1_s60wc"]
 [ext_resource type="Texture2D" uid="uid://dce7hp8g5ofiq" path="res://Assets/Tilesets/Hills.png" id="2_edujn"]
 [ext_resource type="Texture2D" uid="uid://c1x7t6cqfax0x" path="res://Assets/Tilesets/Tilled Dirt.png" id="3_f38sd"]
@@ -574,11 +574,15 @@ unique_name_in_owner = true
 position = Vector2(-219, -150)
 rotation = 0.006818076
 
-[node name="Gameover" type="CanvasLayer" parent="Player" unique_id=356292520]
+[node name="Timer" type="Timer" parent="." unique_id=1635490516]
+wait_time = 5.0
+autostart = true
+
+[node name="Gameover" type="CanvasLayer" parent="." unique_id=356292520]
 unique_name_in_owner = true
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Player/Gameover" unique_id=633762624]
+[node name="ColorRect" type="ColorRect" parent="Gameover" unique_id=633762624]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -586,7 +590,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.49019608)
 
-[node name="Label" type="Label" parent="Player/Gameover/ColorRect" unique_id=367575439]
+[node name="Label" type="Label" parent="Gameover/ColorRect" unique_id=367575439]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -601,10 +605,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "GAME OVER"
-
-[node name="Timer" type="Timer" parent="." unique_id=1635490516]
-wait_time = 5.0
-autostart = true
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bk0c5xukqcjoa"]
+
+[ext_resource type="Texture2D" uid="uid://lb6v28wrlhu6" path="res://Assets/pixilart-sprite-9.png" id="1_gdhnx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0quw"]
+atlas = ExtResource("1_gdhnx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ckg7"]
+atlas = ExtResource("1_gdhnx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5sxj"]
+atlas = ExtResource("1_gdhnx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgoyj"]
+atlas = ExtResource("1_gdhnx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sveqb"]
+atlas = ExtResource("1_gdhnx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp4j3"]
+atlas = ExtResource("1_gdhnx")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_00nfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0quw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ckg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5sxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgoyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sveqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp4j3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7gyal"]
+radius = 4.0
+height = 8.0
+
+[node name="BabyOnion" type="CharacterBody2D" unique_id=661007711]
+collision_layer = 2
+collision_mask = 6
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708586427]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_00nfu")
+frame_progress = 0.09664902
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=239312249]
+shape = SubResource("CapsuleShape2D_7gyal")
