@@ -97,6 +97,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D" unique_id=1848780568]
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_bxodg")
 movement_speed = 110.0

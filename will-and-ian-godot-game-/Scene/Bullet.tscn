@@ -8,6 +8,7 @@
 size = Vector2(8, 8)
 
 [node name="Bullet" type="Area2D" unique_id=2030396150]
+collision_mask = 7
 script = ExtResource("1_ckvpt")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=197654034]

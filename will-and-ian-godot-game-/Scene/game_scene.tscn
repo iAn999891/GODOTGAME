@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://cro66qmbqsigd" path="res://Scene/Player.tscn" id="1_e32lr"]
 [ext_resource type="Texture2D" uid="uid://bx4ck5df3b16k" path="res://Assets/Tilesets/Water.png" id="1_m5do6"]
+[ext_resource type="Script" uid="uid://dec4vur4fttyq" path="res://Scene/game_scene.gd" id="1_mlt6n"]
 [ext_resource type="Texture2D" uid="uid://7ghdfqb0vbj1" path="res://Assets/Tilesets/Grass.png" id="1_s60wc"]
 [ext_resource type="Texture2D" uid="uid://dce7hp8g5ofiq" path="res://Assets/Tilesets/Hills.png" id="2_edujn"]
 [ext_resource type="Texture2D" uid="uid://c1x7t6cqfax0x" path="res://Assets/Tilesets/Tilled Dirt.png" id="3_f38sd"]
 [ext_resource type="Texture2D" uid="uid://cx8do8lkru762" path="res://Assets/Tilesets/Tilled_Dirt_v2.png" id="4_m5do6"]
 [ext_resource type="Texture2D" uid="uid://cqxl1wxwona87" path="res://Assets/Tilesets/Tilled_Dirt_Wide.png" id="4_ugwxx"]
-[ext_resource type="PackedScene" uid="uid://5n01jdrnb7qo" path="res://Scene/mob.tscn" id="8_ee6vw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k031u"]
 texture = ExtResource("1_m5do6")
@@ -21,7 +21,8 @@ texture = ExtResource("1_m5do6")
 3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_b5oy1"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_k031u")
 
@@ -108,7 +109,8 @@ texture = ExtResource("1_s60wc")
 8:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_e32lr"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_edujn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i5nq2"]
@@ -521,14 +523,22 @@ texture = ExtResource("4_ugwxx")
 9:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_s60wc"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 sources/1 = SubResource("TileSetAtlasSource_m5do6")
 sources/0 = SubResource("TileSetAtlasSource_i5nq2")
 sources/5 = SubResource("TileSetAtlasSource_ee6vw")
 sources/6 = SubResource("TileSetAtlasSource_mlt6n")
 sources/7 = SubResource("TileSetAtlasSource_4832p")
 
+[sub_resource type="Curve2D" id="Curve2D_ee6vw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -219, -150, 0, 0, 0, 0, 221, -147, 0, 0, 0, 0, 220, 136)
+}
+point_count = 3
+
 [node name="Game_scene" type="Node2D" unique_id=1960793925]
+script = ExtResource("1_mlt6n")
 
 [node name="Water" type="TileMapLayer" parent="." unique_id=758849818]
 texture_filter = 1
@@ -554,11 +564,18 @@ zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.5
 
-[node name="Mob" parent="." unique_id=1509565561 instance=ExtResource("8_ee6vw")]
-position = Vector2(23, -70)
+[node name="Path2D" type="Path2D" parent="Player" unique_id=224173413]
+position = Vector2(0, 6.4755)
+scale = Vector2(1, 0.99650335)
+curve = SubResource("Curve2D_ee6vw")
 
-[node name="Mob3" parent="." unique_id=1864219841 instance=ExtResource("8_ee6vw")]
-position = Vector2(68, -73)
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=576135819]
+unique_name_in_owner = true
+position = Vector2(-219, -150)
+rotation = 0.006818076
 
-[node name="Mob2" parent="." unique_id=1921024091 instance=ExtResource("8_ee6vw")]
-position = Vector2(100, -48)
+[node name="Timer" type="Timer" parent="." unique_id=1635490516]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
