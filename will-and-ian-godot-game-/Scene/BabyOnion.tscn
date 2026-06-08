@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bk0c5xukqcjoa"]
 
-[ext_resource type="Script" uid="uid://crjxxgrpe3j5o" path="res://Scene/BabyOnion.gd" id="1_f0quw"]
+[ext_resource type="Script" uid="uid://crjxxgrpe3j5o" path="res://BabyOnion.gd" id="1_f0quw"]
 [ext_resource type="Texture2D" uid="uid://lb6v28wrlhu6" path="res://Assets/pixilart-sprite-9.png" id="1_gdhnx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f0quw"]
@@ -67,7 +67,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_00nfu")
 animation = &"fly"
 autoplay = "fly"
-frame_progress = 0.90738755
+frame_progress = 0.087935835
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=239312249]
 shape = SubResource("CapsuleShape2D_7gyal")
