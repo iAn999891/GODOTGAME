@@ -49,7 +49,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_lp4j3")
 }],
 "loop": true,
-"name": &"default",
+"name": &"fly",
 "speed": 12.0
 }]
 
@@ -59,13 +59,18 @@ height = 8.0
 
 [node name="BabyOnion" type="CharacterBody2D" unique_id=661007711]
 collision_layer = 2
-collision_mask = 6
+collision_mask = 2
 script = ExtResource("1_f0quw")
 
 [node name="BabyOnionSprite" type="AnimatedSprite2D" parent="." unique_id=1708586427]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_00nfu")
-frame_progress = 0.7165195
+animation = &"fly"
+autoplay = "fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=239312249]
 shape = SubResource("CapsuleShape2D_7gyal")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1430153740]
+collision_layer = 2
+collision_mask = 3
