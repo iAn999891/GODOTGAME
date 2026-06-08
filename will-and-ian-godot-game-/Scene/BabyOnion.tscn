@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bk0c5xukqcjoa"]
 
+[ext_resource type="Script" uid="uid://crjxxgrpe3j5o" path="res://Scene/BabyOnion.gd" id="1_f0quw"]
 [ext_resource type="Texture2D" uid="uid://lb6v28wrlhu6" path="res://Assets/pixilart-sprite-9.png" id="1_gdhnx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f0quw"]
@@ -49,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7gyal"]
@@ -59,11 +60,12 @@ height = 8.0
 [node name="BabyOnion" type="CharacterBody2D" unique_id=661007711]
 collision_layer = 2
 collision_mask = 6
+script = ExtResource("1_f0quw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708586427]
+[node name="BabyOnionSprite" type="AnimatedSprite2D" parent="." unique_id=1708586427]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_00nfu")
-frame_progress = 0.09664902
+frame_progress = 0.7165195
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=239312249]
 shape = SubResource("CapsuleShape2D_7gyal")

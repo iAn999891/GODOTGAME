@@ -60,7 +60,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_je71b")
 animation = &"Walk"
 autoplay = "Walk"
-frame_progress = 0.9170388
+frame_progress = 0.29721752
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1764786532]
 shape = SubResource("CapsuleShape2D_piucu")
