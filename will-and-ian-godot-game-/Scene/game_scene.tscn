@@ -575,11 +575,9 @@ unique_name_in_owner = true
 position = Vector2(-219, -150)
 rotation = 0.006818076
 
-[node name="BCtimer" type="Timer" parent="." unique_id=1635490516]
+[node name="Timer" type="Timer" parent="." unique_id=1635490516]
 wait_time = 5.0
 autostart = true
-
-[node name="BOtimer" type="Timer" parent="." unique_id=721015710]
 
 [node name="Gameover" type="CanvasLayer" parent="." unique_id=356292520]
 unique_name_in_owner = true
@@ -610,4 +608,4 @@ theme_override_font_sizes/font_size = 100
 text = "GAME OVER"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="BCtimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
