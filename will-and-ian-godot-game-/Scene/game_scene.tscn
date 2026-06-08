@@ -12,18 +12,19 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k031u"]
 texture = ExtResource("1_m5do6")
 0:0/0 = 0
-0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, -8, 8)
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
-1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, -8, 8)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
-2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, -8, 8)
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
-3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, -8, 8)
+3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_b5oy1"]
 physics_layer_0/collision_layer = 4
-physics_layer_0/collision_mask = 3
-physics_layer_1/collision_layer = 1
+physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 0
+physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_k031u")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_edujn"]
