@@ -5,7 +5,7 @@ const SPEED: int = 200
 func _process(delta: float) -> void:
 	position += transform.x * SPEED * delta
 	
-
+@export var damage = 10.0
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

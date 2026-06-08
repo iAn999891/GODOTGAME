@@ -29,10 +29,11 @@ func _physics_process(_delta):
 		
 	move_and_slide()
 	
-	const DAMAGE_RATE = 15.0
 	var overlapping_mobs = %Hitbox.get_overlapping_bodies()
-	if overlapping_mobs.size() > 0:
-		health -= DAMAGE_RATE * overlapping_mobs.size() * _delta
-		%ProgressBar.value = health
-		if health <= 0.0:
-			health_depleted.emit()
+
+	for mob in overlapping_mobs:
+		if mob.has_method("take_damage"): # identifies enemies
+			health -= mob.damage * _delta
+			%ProgressBar.value = health
+			if health <= 0.0:
+				health_depleted.emit()
