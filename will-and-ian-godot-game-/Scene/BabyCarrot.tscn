@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b1121ijvf1nqa" path="res://Scripts/BabyCarrot.gd" id="1_muni5"]
 [ext_resource type="Texture2D" uid="uid://doyqfggds1qik" path="res://Assets/pixilart-sprite-10.png" id="2_kycym"]
-[ext_resource type="Script" uid="uid://bk6p5pbecochl" path="res://Scene/Pathfinding_baby_carrot.gd" id="3_kycym"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0k6o"]
 atlas = ExtResource("2_kycym")
@@ -54,6 +53,7 @@ height = 8.0
 [node name="BabyCarrot" type="CharacterBody2D" unique_id=1509565561]
 collision_layer = 2
 collision_mask = 6
+motion_mode = 1
 script = ExtResource("1_muni5")
 
 [node name="BabyCarrotSprite" type="AnimatedSprite2D" parent="." unique_id=699888895]
@@ -72,6 +72,5 @@ collision_mask = 3
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=347398910]
 avoidance_enabled = true
-script = ExtResource("3_kycym")
 
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
