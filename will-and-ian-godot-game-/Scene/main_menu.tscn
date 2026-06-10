@@ -44,7 +44,7 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_hii65")
 text = "START"
 
-[node name="QUIT" type="Button" parent="Button_Manager" unique_id=247639080]
+[node name="Quit" type="Button" parent="Button_Manager" unique_id=247639080]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -65,4 +65,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_hii65")
 text = "QUIT"
 
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button_Manager/QUIT" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
