@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://blc0nvjb1i7og"]
+
+[ext_resource type="Script" uid="uid://dss44d4srle17" path="res://main_menu.gd" id="1_ftydy"]
+[ext_resource type="FontFile" uid="uid://btw4gk527dn4t" path="res://Scripts/Micro5-Regular.ttf" id="2_87ipw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hii65"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Main Menu" type="Node2D" unique_id=304014059]
+script = ExtResource("1_ftydy")
+
+[node name="Button_Manager" type="Control" parent="." unique_id=1433917790]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_Manager" unique_id=1107942519]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 635.0
+offset_top = 59.0
+offset_right = 1060.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_87ipw")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_hii65")
+text = "START"
+
+[node name="QUIT" type="Button" parent="Button_Manager" unique_id=247639080]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 635.0
+offset_top = 210.0
+offset_right = 1060.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_87ipw")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_hii65")
+text = "QUIT"
+
+[connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_Manager/QUIT" to="." method="_on_start_pressed"]

@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Will and Ian GodotGame"
-run/main_scene="uid://ontj6tcf5y4q"
+run/main_scene="uid://blc0nvjb1i7og"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [input]
@@ -53,4 +53,4 @@ Fire={
 [rendering]
 
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0.32432464, 0.71181804, 0.48164165, 1)
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
