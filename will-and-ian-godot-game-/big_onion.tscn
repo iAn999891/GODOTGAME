@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://2ynpwv24sq3y"]
+
+[ext_resource type="Script" uid="uid://brglfvdfsltg8" path="res://BigOnion.gd" id="1_k330o"]
+
+[node name="BigOnion" type="CharacterBody2D" unique_id=2089634038]
+script = ExtResource("1_k330o")
