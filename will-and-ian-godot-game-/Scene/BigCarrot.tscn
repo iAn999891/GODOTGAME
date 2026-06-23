@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dbo37m6qquej7"]
+
+[ext_resource type="Script" uid="uid://wo7q8n1n8tm3" path="res://Scene/BigCarrot.gd" id="1_a8i0c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iayx2"]
+
+[node name="BigCarrot" type="CharacterBody2D" unique_id=399313060]
+script = ExtResource("1_a8i0c")
+
+[node name="BigCarrotSprite" type="AnimatedSprite2D" parent="." unique_id=1417259094]
+sprite_frames = SubResource("SpriteFrames_iayx2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1414221821]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2141761619]
+collision_layer = 2
+collision_mask = 3

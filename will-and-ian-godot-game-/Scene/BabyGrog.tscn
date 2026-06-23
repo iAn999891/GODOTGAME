@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bq46ua411yful"]
+
+[ext_resource type="Script" uid="uid://do5r6sv41rcn8" path="res://BabyGrog.gd" id="1_o2ajn"]
+
+[node name="BabyGrog" type="CharacterBody2D" unique_id=465258371]
+script = ExtResource("1_o2ajn")
+
+[node name="BabyGrogSprite" type="AnimatedSprite2D" parent="." unique_id=1032551579]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020000524]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1272581923]
+collision_layer = 2
+collision_mask = 3

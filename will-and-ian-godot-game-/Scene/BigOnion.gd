@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 var health = 1
 
 @onready var player = get_node("/root/Game_scene/Player")
@@ -9,12 +8,12 @@ var health = 1
 
 func _physics_process(_delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 75
+	velocity = direction * 80
 	
 	if player.global_position.x > global_position.x:
-		$BabyOnionSprite.flip_h = true
+		$BigOnionSprite.flip_h = true
 	else:
-		$BabyOnionSprite.flip_h = false
+		$BigOnionSprite.flip_h = false
 	move_and_slide()
 
 func take_damage():

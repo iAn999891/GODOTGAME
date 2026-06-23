@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ce3krdvt3nos2"]
+
+[ext_resource type="Script" uid="uid://cn8xshtpf4cgh" path="res://Scene/BigGrog.gd" id="1_853ae"]
+
+[node name="BigGrog" type="CharacterBody2D" unique_id=907895333]
+script = ExtResource("1_853ae")
+
+[node name="BigGrogSprite" type="AnimatedSprite2D" parent="." unique_id=175296571]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2025096105]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=813235434]
+collision_layer = 2
+collision_mask = 3

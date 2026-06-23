@@ -1,23 +1,46 @@
 extends Node2D
 
 
-func spawn_carrot():
+func spawn_BabyCarrot():
 	var new_mob = preload("res://Scene/BabyCarrot.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
 	new_mob.global_position = %PathFollow2D.global_position
 	add_child(new_mob)
-
-func spawn_onion():
+	
+func spawn_BigCarrot():
+	var new_mob = preload("res://Scene/BigOnion.tscn").instantiate()
+	%PathFollow2D.progress_ratio = randf()
+	new_mob.global_position = %PathFollow2D.global_position
+	add_child(new_mob)
+	
+func spawn_BabyOnion():
 	var new_mob = preload("res://Scene/BabyOnion.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
 	new_mob.global_position = %PathFollow2D.global_position
 	add_child(new_mob)
-
+	
+func spawn_BigOnion():
+	var new_mob = preload("res://Scene/BigOnion.tscn").instantiate()
+	%PathFollow2D.progress_ratio = randf()
+	new_mob.global_position = %PathFollow2D.global_position
+	add_child(new_mob)
+	
+func spawn_BabyGrog():
+	var new_mob = preload("res://Scene/BigOnion.tscn").instantiate()
+	%PathFollow2D.progress_ratio = randf()
+	new_mob.global_position = %PathFollow2D.global_position
+	add_child(new_mob)
+	
+func spawn_BigGrog():
+	var new_mob = preload("res://Scene/BigOnion.tscn").instantiate()
+	%PathFollow2D.progress_ratio = randf()
+	new_mob.global_position = %PathFollow2D.global_position
+	add_child(new_mob)
 
 func _on_timer_timeout() -> void:
-	spawn_onion()
-	spawn_carrot()
-
+	spawn_BabyOnion()
+	spawn_BabyCarrot()
+	spawn_BigOnion()
 
 func _on_player_health_depleted() -> void:
 	%Gameover.visible = true

@@ -1,7 +1,32 @@
 [gd_scene format=3 uid="uid://2ynpwv24sq3y"]
 
-[ext_resource type="Script" uid="uid://brglfvdfsltg8" path="res://BigOnion.gd" id="1_k330o"]
 [ext_resource type="Texture2D" uid="uid://65spmgqocf5u" path="res://Assets/pixilart-sprite-11.png" id="2_5dix0"]
+
+[sub_resource type="GDScript" id="GDScript_k330o"]
+script/source = "extends CharacterBody2D
+
+
+var health = 1
+
+@onready var player = get_node(\"/root/Game_scene/Player\")
+
+@export var damage = 45
+func _physics_process(_delta):
+	var direction = global_position.direction_to(player.global_position)
+	velocity = direction * 75
+	
+	if player.global_position.x > global_position.x:
+		$BabyOnionSprite.flip_h = true
+	else:
+		$BabyOnionSprite.flip_h = false
+	move_and_slide()
+
+func take_damage():
+	health -= 1
+			
+	if health == 0:
+		queue_free()
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lgfi7"]
 radius = 7.0
@@ -43,7 +68,7 @@ animations = [{
 }]
 
 [node name="BigOnion" type="CharacterBody2D" unique_id=2089634038]
-script = ExtResource("1_k330o")
+script = SubResource("GDScript_k330o")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1153544071]
 collision_layer = 2
