@@ -1,14 +1,65 @@
 [gd_scene format=3 uid="uid://ce3krdvt3nos2"]
 
 [ext_resource type="Script" uid="uid://cn8xshtpf4cgh" path="res://Scene/BigGrog.gd" id="1_853ae"]
+[ext_resource type="Texture2D" uid="uid://cnrjm3e2xroi6" path="res://Assets/pixilart-sprite.png" id="2_fp3fb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j52io"]
+atlas = ExtResource("2_fp3fb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwulh"]
+atlas = ExtResource("2_fp3fb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3m1o"]
+atlas = ExtResource("2_fp3fb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tynq"]
+atlas = ExtResource("2_fp3fb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvi0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j52io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwulh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3m1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tynq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c1ssf"]
+height = 20.0
 
 [node name="BigGrog" type="CharacterBody2D" unique_id=907895333]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_853ae")
 
 [node name="BigGrogSprite" type="AnimatedSprite2D" parent="." unique_id=175296571]
+texture_filter = 1
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_yvi0l")
+autoplay = "default"
+frame_progress = 0.105609044
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2025096105]
+shape = SubResource("CapsuleShape2D_c1ssf")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=813235434]
 collision_layer = 2
 collision_mask = 3
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=466652100]
+avoidance_enabled = true

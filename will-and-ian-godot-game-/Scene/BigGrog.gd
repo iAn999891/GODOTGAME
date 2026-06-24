@@ -24,11 +24,10 @@ func _physics_process(_delta):
 	velocity = direction * move_speed
 
 	# Flip sprite
-	if velocity.x > 0:
+	if velocity.x < 0:
 		$BigGrogSprite.flip_h = true
 	else:
 		$BigGrogSprite.flip_h = false
-
 	move_and_slide()
 
 func take_damage():

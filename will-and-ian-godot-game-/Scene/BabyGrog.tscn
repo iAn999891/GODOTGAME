@@ -1,14 +1,58 @@
 [gd_scene format=3 uid="uid://bq46ua411yful"]
 
 [ext_resource type="Script" uid="uid://do5r6sv41rcn8" path="res://BabyGrog.gd" id="1_o2ajn"]
+[ext_resource type="Texture2D" uid="uid://cbsj1n6fky34n" path="res://Assets/pixilart-sprite (1).png" id="2_yavq1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh005"]
+atlas = ExtResource("2_yavq1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rryv"]
+atlas = ExtResource("2_yavq1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgvvs"]
+atlas = ExtResource("2_yavq1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8crm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh005")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rryv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgvvs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tui1u"]
+radius = 5.0
+height = 10.0
 
 [node name="BabyGrog" type="CharacterBody2D" unique_id=465258371]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_o2ajn")
 
 [node name="BabyGrogSprite" type="AnimatedSprite2D" parent="." unique_id=1032551579]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_y8crm")
+autoplay = "default"
+frame_progress = 0.9797101
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020000524]
+shape = SubResource("CapsuleShape2D_tui1u")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1272581923]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 6
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=656000267]
+avoidance_enabled = true
