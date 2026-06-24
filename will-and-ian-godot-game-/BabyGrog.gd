@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-var health = 5
+var health = 4
 
 @export var damage = 25
-@export var move_speed = 35
+@export var move_speed = 40
 
 @onready var player = get_node("/root/Game_scene/Player")
 @onready var nav_agent = $NavigationAgent2D
