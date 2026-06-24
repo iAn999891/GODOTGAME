@@ -35,4 +35,5 @@ func take_damage():
 	health -= 1
 
 	if health <= 0:
+		Global.points += 1
 		queue_free()

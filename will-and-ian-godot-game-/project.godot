@@ -18,6 +18,10 @@ config/name="Will and Ian GodotGame"
 run/main_scene="uid://blc0nvjb1i7og"
 config/features=PackedStringArray("4.6", "Mobile")
 
+[autoload]
+
+Global="*uid://dnuij7gexjiej"
+
 [input]
 
 Move_up={
