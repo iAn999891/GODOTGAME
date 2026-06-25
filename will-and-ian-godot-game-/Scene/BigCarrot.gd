@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-var health = 6
+var health = 3
 
-@export var damage = 35
-@export var move_speed = 35
+@export var damage = 25
+@export var move_speed = 55
 
 @onready var player = get_node("/root/Game_scene/Player")
 
@@ -27,5 +27,5 @@ func take_damage():
 	health -= 1
 
 	if health <= 0:
-		Global.points += 7
+		Global.points += 15
 		queue_free()
