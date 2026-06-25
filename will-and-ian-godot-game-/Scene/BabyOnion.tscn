@@ -58,8 +58,8 @@ radius = 4.0
 height = 8.0
 
 [node name="BabyOnion" type="CharacterBody2D" unique_id=661007711]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_f0quw")
 
 [node name="BabyOnionSprite" type="AnimatedSprite2D" parent="." unique_id=1708586427]
