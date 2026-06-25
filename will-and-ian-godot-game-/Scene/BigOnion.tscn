@@ -1,27 +1,30 @@
 [gd_scene format=3 uid="uid://b1e6knaosjvme"]
 
 [ext_resource type="Script" uid="uid://npx8lbl5ylm0" path="res://Scene/BigOnion.gd" id="1_yjvx7"]
-[ext_resource type="Texture2D" uid="uid://65spmgqocf5u" path="res://Assets/pixilart-sprite-11.png" id="2_d6x1t"]
+[ext_resource type="Texture2D" uid="uid://bj5iu2kybu8y4" path="res://Scene/pixilart-sprite-16.png" id="2_yjvx7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8c3ip"]
-atlas = ExtResource("2_d6x1t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6x1t"]
+atlas = ExtResource("2_yjvx7")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4dpm"]
-atlas = ExtResource("2_d6x1t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c3ip"]
+atlas = ExtResource("2_yjvx7")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0wvcc"]
-atlas = ExtResource("2_d6x1t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4dpm"]
+atlas = ExtResource("2_yjvx7")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3dyhx"]
-atlas = ExtResource("2_d6x1t")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wvcc"]
+atlas = ExtResource("2_yjvx7")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jyt1i"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6x1t")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8c3ip")
 }, {
@@ -30,9 +33,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0wvcc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3dyhx")
 }],
 "loop": true,
 "name": &"default",
@@ -44,7 +44,7 @@ radius = 7.0
 
 [node name="BigOnion" type="CharacterBody2D" unique_id=1247719428]
 collision_layer = 4
-collision_mask = 4
+collision_mask = 0
 script = ExtResource("1_yjvx7")
 
 [node name="BigOnionSprite" type="AnimatedSprite2D" parent="." unique_id=721121440]
