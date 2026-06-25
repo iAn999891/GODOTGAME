@@ -574,7 +574,7 @@ rotation = -1.5707964
 progress = 1445.0122
 
 [node name="Timer" type="Timer" parent="." unique_id=1635490516]
-wait_time = 5.0
+wait_time = 3.5
 autostart = true
 
 [node name="Gameover" type="CanvasLayer" parent="." unique_id=356292520]
