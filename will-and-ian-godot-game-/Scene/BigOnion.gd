@@ -8,7 +8,7 @@ var health = 1
 
 func _physics_process(_delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 85
+	velocity = direction * 65
 	
 	if player.global_position.x > global_position.x:
 		$BigOnionSprite.flip_h = true

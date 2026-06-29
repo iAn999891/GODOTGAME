@@ -3,7 +3,7 @@ extends CharacterBody2D
 var health = 4
 
 @export var damage = 30
-@export var move_speed = 40
+@export var move_speed = 35
 
 @onready var player = get_node("/root/Game_scene/Player")
 
