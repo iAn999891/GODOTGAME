@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uhgdm44n4k0y"]
 
-[ext_resource type="Texture2D" uid="uid://c331bwmj04n7l" path="res://Assets/pixil-frame-0-2.png" id="2_cquod"]
+[ext_resource type="Texture2D" uid="uid://v1oj2q3ler24" path="res://Assets/pixilart-drawing (5).png" id="1_heg0n"]
 [ext_resource type="Script" uid="uid://brm4afmgkqr88" path="res://Scripts/Bullet_spin.gd" id="3_nsgdd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckvpt"]
@@ -10,16 +10,17 @@ size = Vector2(8, 8)
 collision_mask = 7
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=197654034]
-position = Vector2(-2, -2)
+position = Vector2(-2, -3)
 rect = Rect2(-6, -6, 16, 16)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=372136071]
 texture_filter = 1
 position = Vector2(0, -1)
-texture = ExtResource("2_cquod")
+texture = ExtResource("1_heg0n")
 script = ExtResource("3_nsgdd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1376494657]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_ckvpt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
